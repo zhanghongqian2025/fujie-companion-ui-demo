@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An independent, interactive companion UI concept by Beijing Fujie Technology. Scripted conversations, no backend.">
+  <title>Lune — a little room for you</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="rail" aria-label="Main navigation">
+    <a class="wordmark" href="#" aria-label="Lune home"><span class="moon">◒</span> lune<span class="brand-dot">.</span></a>
+    <div class="rail-label">YOUR LITTLE WORLD</div>
+    <nav>
+      <button class="nav-item active" data-view="conversation"><span>◌</span> Conversations <i>01</i></button>
+      <button class="nav-item" data-view="scenes"><span>◈</span> Little escapes</button>
+      <button class="nav-item" data-view="moments"><span>♡</span> Saved moments</button>
+    </nav>
+    <div class="rail-spacer"></div>
+    <div class="side-note"><span class="small-star">✧</span><p>You don’t have to<br>have the right words.</p><small>Just start where you are.</small></div>
+    <button id="theme-toggle" class="theme-toggle" aria-pressed="false"><span>☀</span> A brighter room <span class="toggle"></span></button>
+    <div class="owner"><span class="owner-avatar">J</span><div>Jamie<small>My quiet corner</small></div><span>⋯</span></div>
+  </aside>
+  <main>
+    <header class="topbar"><span class="mobile-brand">◒ lune.</span><div class="breadcrumb">Your space <span>/</span> <strong id="view-label">A conversation with Ella</strong></div><span class="top-status"><b></b> Take your time</span></header>
+    <nav class="mobile-nav" aria-label="Mobile navigation"><button class="active" data-view="conversation">Conversation</button><button data-view="scenes">Escapes</button><button data-view="moments">Saved</button><button id="mobile-theme" aria-label="Switch color palette" aria-pressed="false">☀</button></nav>
+    <div class="workspace">
+      <section class="companion-card" aria-label="Your companion Ella">
+        <div class="portrait"><div class="portrait-grain"></div><span class="portrait-tag">A familiar kind of calm</span>
+          <svg class="portrait-art" viewBox="0 0 400 470" role="img" aria-label="Original illustration of Ella in warm afternoon light">
+            <defs><linearGradient id="sky" x2="1" y2="1"><stop stop-color="#e2b396"/><stop offset="1" stop-color="#735b65"/></linearGradient><linearGradient id="coat" x2="0" y2="1"><stop stop-color="#e8ddd1"/><stop offset="1" stop-color="#b7ada4"/></linearGradient><linearGradient id="skin" x2="1" y2="1"><stop stop-color="#efc9ad"/><stop offset="1" stop-color="#cc987e"/></linearGradient><linearGradient id="hair" x2="1" y2="1"><stop stop-color="#553f3d"/><stop offset="1" stop-color="#302f37"/></linearGradient></defs>
+            <rect width="400" height="470" fill="url(#sky)"/><circle cx="90" cy="105" r="108" fill="#f9d9ac" opacity=".65"/><path d="M-40 338 Q102 220 230 328 T440 310 V470 H-40" fill="#7f7774"/><path d="M-20 391 Q157 273 428 395 V480 H-20" fill="#666c69"/>
+            <path d="M166 133 C90 187 111 271 99 363 L280 357 C280 294 310 201 250 148 Z" fill="url(#hair)"/>
+            <path d="M73 472 C72 364 104 319 159 304 L244 306 C308 326 327 379 335 472" fill="url(#coat)"/>
+            <path d="M169 272 L167 316 Q202 348 235 313 L232 267" fill="url(#skin)"/>
+            <path d="M139 188 C141 137 263 134 263 194 L255 242 Q231 291 204 291 Q169 287 145 243 Z" fill="url(#skin)"/>
+            <path d="M138 212 Q108 175 158 132 Q231 90 268 158 L280 218 Q249 171 238 156 Q209 198 138 212" fill="url(#hair)"/>
+            <path d="M125 215 Q117 159 155 135 Q230 105 265 163 L255 185 Q236 171 232 151 Q190 194 138 209 L138 277 Q116 255 125 215" fill="url(#hair)"/>
+            <path d="M167 220 Q178 212 187 219 M219 219 Q230 211 241 216" fill="none" stroke="#69524b" stroke-width="3" stroke-linecap="round"/>
+            <path d="M171 227 Q178 232 185 226 M221 225 Q231 229 237 222" fill="none" stroke="#413b3d" stroke-width="2" stroke-linecap="round"/>
+            <path d="M204 225 L198 243 L205 244 M189 258 Q205 266 220 254" fill="none" stroke="#a76a60" stroke-width="2" stroke-linecap="round"/>
+            <path d="M159 304 L198 347 L153 388 L131 320 M244 306 L207 347 L255 390 L278 322" fill="#eee5dc" stroke="#c8bcb0"/>
+            <path d="M197 347 L197 472 M207 347 L218 472" stroke="#a89f96" fill="none"/>
+            <circle cx="258" cy="233" r="4" fill="#e8c19a"/><path d="M247 256 Q285 306 263 347" fill="none" stroke="#3a3137" stroke-width="16" stroke-linecap="round"/>
+            <path d="M42 450 Q-3 354 43 295 M44 374 Q90 357 78 321 M35 386 Q-6 368 5 330" fill="none" stroke="#737767" stroke-width="11" stroke-linecap="round" opacity=".75"/>
+          </svg>
+          <div class="portrait-bottom"><span>ELLA</span><span>✧</span></div>
+        </div>
+        <div class="companion-info"><div class="name-row"><h1>Ella</h1><span class="available">Here with you</span></div><p>A good listener. A slow walker.<br> Always up for one more chapter.</p><div class="tags"><span>Thoughtful</span><span>Curious</span><span>A little witty</span></div><button id="about-button" class="text-button">Get to know Ella <span>↗</span></button></div>
+        <div class="scene-picker"><small>THE MOOD TONIGHT</small><button id="scene-button"><span class="scene-thumb">✦</span><span id="scene-name">A cabin in the rain<small>Soft light, nowhere to rush</small></span><span>↗</span></button></div>
+      </section>
+      <section class="conversation" id="conversation-panel" aria-label="Conversation">
+        <div class="chat-heading"><div><span class="eyebrow">A LITTLE ROOM FOR YOU</span><h2>Let the day slow down.</h2></div><button id="reset-button" class="icon-button" aria-label="Start a fresh conversation" title="Start fresh">↺</button></div>
+        <div class="date-rule"><span>Just now · a fresh start</span></div>
+        <div id="messages" class="messages" role="log" aria-live="polite" aria-relevant="additions"><article class="message assistant"><span class="message-avatar">e.</span><div><small>Ella <span>18:42</span></small><p>I put the kettle on. The rain is doing its thing outside.<br><br>How’s your world feeling tonight?</p></div></article></div>
+        <div class="composer-zone"><div id="suggestions" class="suggestions"><button data-prompt="It’s been a long day.">It’s been a long day <span>↗</span></button><button data-prompt="Let’s go somewhere in our imagination.">Let’s escape for a bit <span>↗</span></button><button data-prompt="Tell me something small and lovely.">Something small & lovely <span>↗</span></button></div><form id="chat-form"><label class="sr-only" for="message-input">Your message to Ella</label><textarea id="message-input" placeholder="Start anywhere. Ella is listening…" maxlength="2000" rows="1"></textarea><button type="submit" id="send-button" aria-label="Send message"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button></form><div class="composer-bottom"><span>↵ Send <span class="desktop-hint"> · Shift + Enter for a new line</span></span><button id="save-button">♡ Save this moment</button></div><p class="demo-note">Independent UI concept by Fujie · Scripted replies · Messages stay in this tab</p><div id="feedback" role="status"></div></div>
+      </section>
+      <section id="scenes-panel" class="alternative-panel" hidden><span class="eyebrow">LITTLE ESCAPES</span><h2>A change of scenery.</h2><p class="panel-intro">Same company. A different kind of evening.</p><div class="scene-grid"><button data-scene="rain" class="scene-tile rain"><span>01 / SLOW DOWN</span><div class="scene-orb"></div><h3>A cabin in the rain</h3><p>Soft light. A warm cup. No plans.</p><b>Step inside ↗</b></button><button data-scene="sea" class="scene-tile sea"><span>02 / BREATHE OUT</span><div class="scene-orb"></div><h3>The coast at dawn</h3><p>Salt air, empty sand, a new beginning.</p><b>Take a walk ↗</b></button><button data-scene="city" class="scene-tile city"><span>03 / WANDER A LITTLE</span><div class="scene-orb"></div><h3>A late-night bookstore</h3><p>A story waiting just around the corner.</p><b>Find your story ↗</b></button></div><p class="demo-note">Illustrated scenes · Independent concept, not client work</p></section>
+      <section id="moments-panel" class="alternative-panel" hidden><span class="eyebrow">SAVED MOMENTS</span><h2>The little things that stay.</h2><p class="panel-intro">A few words to come back to, for as long as this tab stays open.</p><div id="saved-list"></div></section>
+    </div>
+  </main>
+  <dialog id="about-dialog"><button id="close-dialog" class="icon-button" aria-label="Close about Ella">×</button><span class="eyebrow">MEET ELLA</span><h2>Good company.<br>No grand expectations.</h2><p>Ella is an imagined companion for this interface concept: curious about ordinary days, fond of rainy walks, and a little too enthusiastic about bookshops.</p><p class="demo-note">This is a frontend demonstration with scripted responses, not a live AI companion service.</p><button id="back-to-chat" class="primary-button">Back to our conversation ↗</button></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
